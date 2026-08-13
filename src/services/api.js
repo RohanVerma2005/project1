@@ -58,7 +58,7 @@ class ApiService {
     }
 
     async getAvailableSlots(date) {
-        return this.request(`/availability/${date}`);
+        return this.request(`/availability?date=${encodeURIComponent(date)}`);
     }
 
     async healthCheck() {
